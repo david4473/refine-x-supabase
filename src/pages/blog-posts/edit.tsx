@@ -11,7 +11,6 @@ import { Alert, Button, Form, Input, Select, Upload, DatePicker } from "antd";
 import { RcFile } from "antd/lib/upload/interface";
 import dayjs from "dayjs";
 import { supabaseClient, normalizeFile } from "../../utility";
-import { IPost, ICategory } from "../../interfaces/index";
 
 export const BlogPostEdit: React.FC<IResourceComponentsProps> = () => {
   const { formProps, saveButtonProps, queryResult } = useForm();
@@ -59,7 +58,7 @@ export const BlogPostEdit: React.FC<IResourceComponentsProps> = () => {
         >
           <Input.TextArea rows={5} />
         </Form.Item>
-        <Form.Item
+        {/*         <Form.Item
           label="Status"
           name={["status"]}
           rules={[
@@ -69,7 +68,7 @@ export const BlogPostEdit: React.FC<IResourceComponentsProps> = () => {
           ]}
         >
           <Input />
-        </Form.Item>
+        </Form.Item> */}
         <Form.Item
           label="Category"
           name={"categoryId"}
@@ -81,7 +80,7 @@ export const BlogPostEdit: React.FC<IResourceComponentsProps> = () => {
         >
           <Select {...categorySelectProps} />
         </Form.Item>
-        <Form.Item
+        {/* <Form.Item
           label="Created At"
           name={["created_at"]}
           rules={[
@@ -94,10 +93,10 @@ export const BlogPostEdit: React.FC<IResourceComponentsProps> = () => {
           })}
         >
           <DatePicker />
-        </Form.Item>
+        </Form.Item> */}
         <Form.Item label="videos">
           <Form.Item
-            name="videos"
+            name="images"
             valuePropName="fileList"
             normalize={normalizeFile}
             noStyle

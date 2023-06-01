@@ -8,6 +8,7 @@ import {
   DateField,
 } from "@refinedev/antd";
 import { Typography, Space } from "antd";
+import ReactPlayer from "react-player";
 
 const { Title, Text } = Typography;
 
@@ -25,6 +26,8 @@ export const BlogPostShow: React.FC<IResourceComponentsProps> = () => {
     },
   });
 
+  console.log(record);
+
   return (
     <Show isLoading={isLoading}>
       <Title level={5}>Id</Title>
@@ -33,16 +36,33 @@ export const BlogPostShow: React.FC<IResourceComponentsProps> = () => {
       <MarkdownField value={record?.title} />
       <Title level={5}>Content</Title>
       <MarkdownField value={record?.content} />
-      <Title level={5}>Status</Title>
-      <TextField value={record?.status} />
+      {/*       <Title level={5}>Status</Title>
+      <TextField value={record?.status} /> */}
       <Title level={5}>Category</Title>
       {categoryIsLoading ? <>Loading...</> : <>{categoryData?.data?.title}</>}
-      <Title level={5}>Created At</Title>
-      <DateField value={record?.created_at} />
+      {/*   <Title level={5}>Created At</Title>
+      <DateField value={record?.created_at} /> */}
       <Title level={5}>Videos</Title>
       <Space wrap>
-        {record?.videos ? (
-          record?.videos.map((vid: any) => <Text>{vid.url}</Text>)
+        {record?.images ? (
+          record?.images.map((video: any) => (
+            <div className="player_container">
+              <ReactPlayer
+                className="react-player"
+                url={video.url}
+                width="100%"
+                height="100%"
+                controls
+                light={
+                  <img
+                    src="/images/flags/refine_new.png"
+                    alt="Thumbnail"
+                    className="thumbnail"
+                  />
+                }
+              />
+            </div>
+          ))
         ) : (
           <Text>No videos found</Text>
         )}

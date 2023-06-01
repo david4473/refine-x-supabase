@@ -1,0 +1,22 @@
+.react-player__preview {
+  width: inherit;
+}
+
+.react-player__play-icon {
+  border-color: cadetblue;
+}
+
+.react-player__shadow {
+  background: radial-gradient(
+    rgba(116, 78, 117, 0.829),
+    rgba(110, 84, 114, 0.651) 60%
+  ) !important;
+}
+
+.thumbnail {
+  width: inherit;
+}
+
+.player_container {
+  width: 100%;
+}
