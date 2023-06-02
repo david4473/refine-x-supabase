@@ -60,7 +60,7 @@ function App() {
             i18nProvider={i18nProvider}
             resources={[
               {
-                name: "posts",
+                name: "videos",
                 list: "/blog-posts",
                 create: "/blog-posts/create",
                 edit: "/blog-posts/edit/:id",

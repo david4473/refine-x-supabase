@@ -44,8 +44,8 @@ export const BlogPostShow: React.FC<IResourceComponentsProps> = () => {
       <DateField value={record?.created_at} /> */}
       <Title level={5}>Videos</Title>
       <Space wrap>
-        {record?.images ? (
-          record?.images.map((video: any) => (
+        {record?.videos ? (
+          record?.videos.map((video: any) => (
             <div className="player_container">
               <ReactPlayer
                 className="react-player"

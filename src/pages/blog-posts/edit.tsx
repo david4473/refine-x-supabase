@@ -96,7 +96,7 @@ export const BlogPostEdit: React.FC<IResourceComponentsProps> = () => {
         </Form.Item> */}
         <Form.Item label="videos">
           <Form.Item
-            name="images"
+            name="videos"
             valuePropName="fileList"
             normalize={normalizeFile}
             noStyle
