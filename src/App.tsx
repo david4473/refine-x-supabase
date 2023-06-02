@@ -61,10 +61,10 @@ function App() {
             resources={[
               {
                 name: "videos",
-                list: "/blog-posts",
-                create: "/blog-posts/create",
-                edit: "/blog-posts/edit/:id",
-                show: "/blog-posts/show/:id",
+                list: "/videos",
+                create: "/videos/create",
+                edit: "/videos/edit/:id",
+                show: "/videos/show/:id",
                 meta: {
                   canDelete: true,
                 },
