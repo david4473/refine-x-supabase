@@ -107,9 +107,9 @@ function App() {
               >
                 <Route
                   index
-                  element={<NavigateToResource resource="blog_posts" />}
+                  element={<NavigateToResource resource="videos" />}
                 />
-                <Route path="/blog-posts">
+                <Route path="/videos">
                   <Route index element={<BlogPostList />} />
                   <Route path="create" element={<BlogPostCreate />} />
                   <Route path="edit/:id" element={<BlogPostEdit />} />

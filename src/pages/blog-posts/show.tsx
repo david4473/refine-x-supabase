@@ -26,8 +26,6 @@ export const BlogPostShow: React.FC<IResourceComponentsProps> = () => {
     },
   });
 
-  console.log(record);
-
   return (
     <Show isLoading={isLoading}>
       <Title level={5}>Id</Title>
